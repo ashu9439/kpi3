@@ -13,6 +13,7 @@ import {
 } from "@tanstack/react-query";
 
 import MyGrid from "./pages/MyGrid";
+import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
 
@@ -64,7 +65,10 @@ function App() {
               </div>
             ) : (
               <MyModal show={!isSignedIn} onClose={() => {}}>
-                <div className="d-grid mt-5">
+                <div className="d-grid">
+                  <h1>Sign in Form</h1>
+                  email    : test@test.com <br/>
+                  password : *******
                   <button className="btn-dark" onClick={signin}>
                     Sign in
                   </button>
@@ -98,15 +102,6 @@ function Home() {
 }
 // export default Home
 
-function Dashboard() {
-  return (
-    <>
-      <div className="card-header">Dashboard</div>
-      <div className="card-body">Dashboard</div>
-    </>
-  );
-}
-// export default Dashboard
 
 const MenuBar = () => {
   return (
